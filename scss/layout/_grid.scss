@@ -1,0 +1,85 @@
+@use "../util" as u;
+
+.item1 {
+  grid-area: header;
+}
+.item2 {
+  grid-area: menu;
+}
+.item3 {
+  grid-area: main;
+}
+.item4 {
+  grid-area: right;
+}
+.item5 {
+  grid-area: footer;
+}
+
+
+.item1,
+.item2,
+.item3,
+.item4,
+.item5 {
+  border-radius: u.em(19);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "menu main main main right right"
+    "menu footer footer footer footer footer";
+  gap: 10px;
+  background-color: hsl(51, 84%, 54%);
+  padding: 10px;
+  margin-top: u.em(60);
+  margin-bottom: u.em(100);
+  margin-inline: u.em(200);
+  color: gray;
+  border-radius: u.em(19);
+  
+  @include u.breakpoint-down(medium) {
+    margin-inline: u.em(20);
+  }
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: hsl(51, 84%, 54%);
+  padding: 10px;
+  margin-inline: u.em(200);
+  gap: u.em(10);
+  margin-bottom: u.em(100);
+
+  @include u.breakpoint-down(medium) {
+    margin-inline: u.em(20);
+  }
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  color: gray;
+  padding: u.em(10);
+  border-radius: u.em(5);
+}
+
+.fa-square {
+  font-size: clamp(u.rem(18), u.rem(22) + 1.5vw, u.rem(33));
+}
+
+
+
