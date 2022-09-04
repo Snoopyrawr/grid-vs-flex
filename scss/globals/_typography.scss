@@ -34,7 +34,7 @@ h2 {
 
 h4{ 
   text-align: center;
-  color: rgb(231, 137, 231);
+  color: var(--text-color);
   margin-bottom: u.em(50);
 }
 
@@ -45,5 +45,5 @@ h4{
 
 #h4-2 a {
   margin-top: u.em(-40);
-  color: rgb(231, 137, 231) !important;
+  color: var(--text-color);
 }
