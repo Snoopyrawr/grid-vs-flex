@@ -81,5 +81,95 @@
   font-size: clamp(u.rem(18), u.rem(22) + 1.5vw, u.rem(33));
 }
 
+/* MASONRY GALLERY */
+
+img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.grid-section {
+  display:grid;
+  width: 75%;
+  margin: u.em(50) auto;
+  grid-template-rows: repeat(3, 100%);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: u.em(20);
+
+  @include u.breakpoint-down(small) {
+  grid-template-rows: repeat(5, 100%);
+  grid-template-columns: repeat(1, auto);
+  }
+}
+
+.grid {
+  overflow: hidden;
+  border-radius: u.em(12);
+  position: relative;
+  box-shadow: 0px 5px 10px rgba($color: #000000, $alpha: .5);
+}
+
+.grid-img {
+  width: 100%;
+  height: 100%;
+  transition: .5s;
+  background-size: cover;
+}
+
+.grid:nth-child(1){
+  grid-row: 1/3;
+}
+
+.grid:nth-child(3){
+  grid-row: 1/1;
+  background-size: cover !important;
+}
+
+.grid:nth-child(5){
+  grid-row: 2/4;
+  grid-column: 3/4;
+}
 
 
+.overly {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  background-image: linear-gradient(to bottom,transparent, black);
+  padding: u.em(29) u.em(15) u.em(10);
+  transition: .5s;
+}
+
+.overly h2 {
+  font-size: u.em(16);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: u.em(-10);
+  font-weight:400;
+}
+
+p {
+  opacity: .8
+}
+
+.grid:hover .grid-img {
+  transform: scale(1.3);
+  transition: .3s;
+}
+
+@media screen and (max-width: 768px) {
+
+  .overly h2 {
+    font-size: u.rem(5);
+    margin-bottom: u.em(-50);
+  }
+
+  .overly {
+    padding-bottom: 0;
+  }
+  p {
+  font-size: u.rem(5);
+  }
+}
