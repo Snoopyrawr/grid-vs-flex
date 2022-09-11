@@ -93,7 +93,7 @@ img {
   display:grid;
   width: 75%;
   margin: u.em(50) auto;
-  grid-template-rows: repeat(3, 100%);
+  grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(4, 1fr);
   grid-gap: u.em(20);
 
@@ -159,7 +159,7 @@ p {
   transition: .3s;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
 
   .overly h2 {
     font-size: u.rem(5);
