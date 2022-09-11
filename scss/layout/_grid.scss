@@ -100,7 +100,7 @@ img {
   @include u.breakpoint-down(small) {
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: u.em(10);
+  grid-gap: u.em(20);
   }
 }
 
