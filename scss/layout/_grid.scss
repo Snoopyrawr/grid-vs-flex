@@ -178,7 +178,7 @@ p {
 @media screen and (max-width: 400px) {
 
   .overly h2 {
-    font-size: u.rem(2);
+    font-size: u.rem(6);
     margin-bottom: u.em(-50);
   }
 
@@ -186,6 +186,6 @@ p {
     padding-bottom: 0;
   }
   p {
-  font-size: u.rem(3);
+  font-size: u.rem(8);
   }
 }
