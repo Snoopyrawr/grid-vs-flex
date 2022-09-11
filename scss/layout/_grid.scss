@@ -98,7 +98,7 @@ img {
   grid-gap: u.em(20);
 
   @include u.breakpoint-down(small) {
-  grid-template-rows: repeat(3, 100%);
+  grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   }
 }
